@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- ! ===> Tittle <=== -->
+ <title>Bookmark</title>
+ <link rel="icon"href="images/bookmark img.jpeg" />
+     <!-- ! ===> Font awesome <=== -->
+ <link rel="stylesheet" href="./css/all.min.css" />
+         <!-- ! ===> Fonts <=== -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+         <!-- ! ===> Bootstrap <=== -->
+ <link rel="stylesheet" href="./css/bootstrap.min.css" />
+         <!-- ! ===> CSS <=== -->
+ <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="container bookmark-details d-flex flex-column align-items-center justify-content-center pt-4 pb-4 ">
+        <h1 class="py-2 position-relative ">Bookmarker</h1>
+        <div class="bookmark-info pt-4 mt-4 d-flex flex-column align-items-center justify-content-center gap-4">
+            <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+            <div class="bookmarkName d-flex flex-column justify-content-center">
+            <label for="bookmarkName" class="tittle fw-semibold "><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+            <input type="text" placeholder="Bookmark Name" class="form" id="inputBookmarkName">
+        </div>
+        <div class="bookmarkURL d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="tittle fw-semibold "><i class="fa-solid fa-link pe-2"></i> Site URL </label>
+            <input type="text" placeholder="Website URL" class="form">
+        </div>
+        <button type="button" class="btn btn-danger mb-4 ps-5 pe-5" id="Submit" onclick="submitTask()">Submit</button>
+        <button type="button" id="update" class="btn btn-warning ms-2 d-none" onclick="updateTask();">Update</button>
+
+    </div>
+    <table class="table mt-4 ">
+        <thead>
+          <tr>
+            <th class="text-capitalize text-success-emphasis table-content ps-5">Index</th>
+            <th class="text-capitalize text-success-emphasis table-content">Website Name</th>
+            <th class="text-capitalize text-success-emphasis table-content">Visit</th>
+            <th class="text-capitalize text-success-emphasis table-content">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="allTasks">
+
+        </tbody>
+    </div>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
